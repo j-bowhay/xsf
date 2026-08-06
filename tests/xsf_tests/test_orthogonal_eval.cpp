@@ -51,7 +51,7 @@ std::complex<double> polyval(const std::vector<double> &coeffs, std::complex<dou
     }
 
     const std::vector<double> reversed(coeffs.rbegin(), coeffs.rend());
-    return xsf::cevalpoly(reversed.data(), reversed.size() - 1, x);
+    return xsf::evalpoly(reversed.data(), reversed.size() - 1, x);
 }
 
 double sample(double a, double b, int i) {
