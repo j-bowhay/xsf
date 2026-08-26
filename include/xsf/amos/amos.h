@@ -1316,6 +1316,9 @@ namespace amos {
         if (*ierr != 0) {
             return nz;
         }
+        if (std::imag(z) == 0.0) {
+            z = std::complex<double>(std::real(z), 0.0);
+        }
         nn = n;
         //
         //  SET PARAMETERS RELATED TO MACHINE CONSTANTS.
